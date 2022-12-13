@@ -1,43 +1,23 @@
-## Installation
+# TP-WIK-DPS-TP03
+Pour lancer l'API il faut exécuter les commandes suivantes.
 
-```bash
-$ npm install
-```
+Le WebService permet de récupérer les Headers de la requête sur /ping donc une réponse.
+Dans le cas où on tente une requête autre que /ping on obtiendra une erreur 404 qui nous indiquera que l'adresse n'est pas trouvable
 
-## Running the app
+Pour executer le webservice avec docker 
+### lancer le docker compose
+- docker compose up
 
-```bash
-$ npm run start
+### lancer le docker compose et build
+- docker compose up --build
 
-```
+### stoper un docker compose
+- docker compose down
 
-## Get tests
+### build le projet
+- npx tsc
 
-```bash
-# unit tests
-$ cd src/
-$ git submodule add git@github.com:Wikodit/2022B3API-testing.git test/
+### afficher et visualiser le hostname dans l'API
+- localhost:8080/ping
 
-```
 
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-```
-
-### Setting up database
-
-```bash
-docker-compose up --force-recreate -V
-```
-
-### Testing e2e
-
-```bash
-docker-compose up --force-recreate -V
-
-npm run test
-```
